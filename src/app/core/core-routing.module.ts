@@ -6,6 +6,7 @@ import { FamilleComponent } from './famille/famille.component';
 import { CartevisiteComponent } from './forms/cartevisite/cartevisite.component';
 import { FormsComponent } from './forms/forms.component';
 import { MenuComponent } from './forms/menu/menu.component';
+import { UrlComponent } from './forms/url/url.component';
 import { HomeComponent } from './home/home.component';
 import { ListqrComponent } from './listqr/listqr.component';
 
@@ -19,6 +20,7 @@ const routes: Routes = [
   {path:'list',component:ListqrComponent},
   {path:'carte',component:CartevisiteComponent},
   {path:'parametre',component:ParametreComponent},
+  {path:'url',component:UrlComponent},
   {path:'detail',component:DetailComponent}
     
 

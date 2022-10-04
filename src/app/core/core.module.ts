@@ -7,6 +7,7 @@ import { MenuComponent } from './forms/menu/menu.component';
 import { CartevisiteComponent } from './forms/cartevisite/cartevisite.component';
 import { DetailComponent } from './compte/detail/detail.component';
 import { ParametreComponent } from './compte/parametre/parametre.component';
+import { UrlComponent } from './forms/url/url.component';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { ParametreComponent } from './compte/parametre/parametre.component';
     MenuComponent,
     CartevisiteComponent,
     DetailComponent,
-    ParametreComponent
+    ParametreComponent,
+    UrlComponent
   ],
   imports: [
     CommonModule,
