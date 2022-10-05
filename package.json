@@ -18,11 +18,17 @@
     "@angular/platform-browser": "^14.2.0",
     "@angular/platform-browser-dynamic": "^14.2.0",
     "@angular/router": "^14.2.0",
+<<<<<<< HEAD
     "@techiediaries/ngx-qrcode": "^9.1.0",
     "bootstrap": "^5.2.2",
     "html2canvas": "^1.4.1",
     "jspdf": "^2.5.1",
     "ngx-qrcode-styling": "^1.1.7",
+=======
+    "angularx-qrcode": "^14.0.0",
+    "bootstrap": "^5.2.2",
+
+>>>>>>> fcb4b60ed502f3b6c3b6cf8a556fd0cb00614a0b
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"

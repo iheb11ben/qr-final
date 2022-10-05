@@ -8,11 +8,12 @@ import { CartevisiteComponent } from './forms/cartevisite/cartevisite.component'
 import { DetailComponent } from './compte/detail/detail.component';
 import { ParametreComponent } from './compte/parametre/parametre.component';
 import { UrlComponent } from './forms/url/url.component';
-import { HttpClientModule } from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
-import { NgxQrcodeStylingModule } from 'ngx-qrcode-styling';
-import { ChildComponent } from './forms/url/child/child.component';
-import { NgxQRCodeModule } from '@techiediaries/ngx-qrcode';
+
+
+
+
+
+
 @NgModule({
   declarations: [
     HomeComponent,
@@ -21,15 +22,10 @@ import { NgxQRCodeModule } from '@techiediaries/ngx-qrcode';
     DetailComponent,
     ParametreComponent,
     UrlComponent,
-    ChildComponent
   ],
   imports: [
     CommonModule,
     CoreRoutingModule,
-    FormsModule,
-    HttpClientModule,
-    NgxQrcodeStylingModule,
-    NgxQRCodeModule,
   ]
 })
 export class CoreModule { }

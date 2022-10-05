@@ -14,8 +14,7 @@ import { FooterComponent } from './core/structure/footer/footer.component';
 import { FormsComponent } from './core/forms/forms.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { HttpClientModule } from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
-import { NgxQrcodeStylingModule } from 'ngx-qrcode-styling';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,10 +32,14 @@ import { NgxQrcodeStylingModule } from 'ngx-qrcode-styling';
   imports: [
     BrowserModule,
     AppRoutingModule,
+<<<<<<< HEAD
     FormsModule,
     HttpClientModule,
     NgxQrcodeStylingModule,
     NgxQrcodeStylingModule,
+=======
+
+>>>>>>> fcb4b60ed502f3b6c3b6cf8a556fd0cb00614a0b
   ],
   providers: [],
   bootstrap: [AppComponent]
