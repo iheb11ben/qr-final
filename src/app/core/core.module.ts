@@ -8,7 +8,10 @@ import { CartevisiteComponent } from './forms/cartevisite/cartevisite.component'
 import { DetailComponent } from './compte/detail/detail.component';
 import { ParametreComponent } from './compte/parametre/parametre.component';
 import { UrlComponent } from './forms/url/url.component';
-
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+import { NgxQrcodeStylingModule } from 'ngx-qrcode-styling';
+import { ChildComponent } from './forms/url/child/child.component';
 
 @NgModule({
   declarations: [
@@ -17,11 +20,15 @@ import { UrlComponent } from './forms/url/url.component';
     CartevisiteComponent,
     DetailComponent,
     ParametreComponent,
-    UrlComponent
+    UrlComponent,
+    ChildComponent
   ],
   imports: [
     CommonModule,
-    CoreRoutingModule
+    CoreRoutingModule,
+    FormsModule,
+    HttpClientModule,
+    NgxQrcodeStylingModule
   ]
 })
 export class CoreModule { }
