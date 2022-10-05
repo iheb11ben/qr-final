@@ -8,6 +8,11 @@ import { CartevisiteComponent } from './forms/cartevisite/cartevisite.component'
 import { DetailComponent } from './compte/detail/detail.component';
 import { ParametreComponent } from './compte/parametre/parametre.component';
 import { UrlComponent } from './forms/url/url.component';
+import { FormsModule } from '@angular/forms';
+import { AfficheComponent } from './forms/cartevisite/affiche/affiche.component';
+import { Affiche2Component } from './forms/cartevisite/affiche2/affiche2.component';
+import {QRCodeModule} from 'angularx-qrcode'
+import { NgxQRCodeModule } from 'ngx-qrcode2';
 
 
 @NgModule({
@@ -17,11 +22,16 @@ import { UrlComponent } from './forms/url/url.component';
     CartevisiteComponent,
     DetailComponent,
     ParametreComponent,
-    UrlComponent
+    UrlComponent,
+    AfficheComponent,
+    Affiche2Component
   ],
   imports: [
     CommonModule,
-    CoreRoutingModule
+    // QRCodeModule,
+    CoreRoutingModule,
+    FormsModule,
+    NgxQRCodeModule
   ]
 })
 export class CoreModule { }
