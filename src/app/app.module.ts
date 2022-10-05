@@ -35,7 +35,8 @@ import { NgxQrcodeStylingModule } from 'ngx-qrcode-styling';
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    NgxQrcodeStylingModule
+    NgxQrcodeStylingModule,
+    NgxQrcodeStylingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

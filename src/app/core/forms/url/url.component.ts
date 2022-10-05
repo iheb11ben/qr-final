@@ -1,51 +1,29 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
-import { NgxQrcodeStylingComponent,Options } from 'ngx-qrcode-styling';
+import { Component, OnInit} from '@angular/core';
+import { NgxQrcodeElementTypes, NgxQrcodeErrorCorrectionLevels } from '@techiediaries/ngx-qrcode';
+import jsPDF from 'jspdf';
+import html2canvas from 'html2canvas';
 @Component({
   selector: 'app-url',
   templateUrl: './url.component.html',
   styleUrls: ['./url.component.scss']
 })
 export class UrlComponent implements OnInit {
-  @ViewChild('qrcode', { static: false }) public qrcode!: NgxQrcodeStylingComponent;
-  dat:string=''
-  img:string=''
+  elementType= NgxQrcodeElementTypes.URL
+  correctionLevel = NgxQrcodeErrorCorrectionLevels.HIGH
+  value = ''
   constructor() { }
   ngOnInit(): void {
   }
-  public config: Options = {
-    width: 300,
-    height: 300,
-    data: '',
-    image: '',
-    margin: 5,
-    dotsOptions: {
-      color: "#1977f3",
-      type: "dots"
-    },
-    backgroundOptions: {
-      color: "#ffffff",
-    },
-    imageOptions: {
-      crossOrigin: "anonymous",
-      margin: 0
-    }
-  };
-  onUpdate(): void {
-    this.qrcode.update(this.qrcode.config, {
-      // height: 300,
-      // width: 300,
-      frameOptions: {
-        height: 600,
-        width: 600,
-      },
-    }).subscribe((res) => {
-      // TO DO something!
+  public openPDF(): void {
+    let DATA: any = document.getElementById('htmlData');
+    html2canvas(DATA).then((canvas) => {
+      let fileWidth = 400;
+      let fileHeight = (canvas.height * fileWidth) / canvas.width;
+      const FILEURI = canvas.toDataURL('image/png');
+      let PDF = new jsPDF('p', 'mm', 'a6');
+      let position = 20;
+      PDF.addImage(FILEURI, 'PNG', 35, position, fileWidth, fileHeight);
+      PDF.save('Qr-Code.pdf');
     });
-}
-
-onDownload(): void {
-    this.qrcode.download("file-name.png").subscribe((res) => {
-      // TO DO something!
-    });
-}
+  }
 }

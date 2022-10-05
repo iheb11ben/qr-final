@@ -12,7 +12,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { NgxQrcodeStylingModule } from 'ngx-qrcode-styling';
 import { ChildComponent } from './forms/url/child/child.component';
-
+import { NgxQRCodeModule } from '@techiediaries/ngx-qrcode';
 @NgModule({
   declarations: [
     HomeComponent,
@@ -28,7 +28,8 @@ import { ChildComponent } from './forms/url/child/child.component';
     CoreRoutingModule,
     FormsModule,
     HttpClientModule,
-    NgxQrcodeStylingModule
+    NgxQrcodeStylingModule,
+    NgxQRCodeModule,
   ]
 })
 export class CoreModule { }
