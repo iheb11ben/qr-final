@@ -9,24 +9,24 @@
                 <div class="col-lg-6">
                     <div class="p-5">
                         <div class="text-center">
-                            <h1 class="h4 text-gray-900 mb-4">Welcome Back!</h1>
+                            <h1 class="h4 text-gray-900 mb-4">Bienvenue!</h1>
                         </div>
-                        <form  class="user">
+                        <div  class="user">
                             <div class="form-group">
-                                <input type="email"  class="form-control form-control-user" name="sd"   id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Enter Email Address...">
+                                <input type="email"  class="form-control form-control-user" name="sd" [(ngModel)]="email"  id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Addresse email">
                             </div>
                             <div class="form-group">
-                                <input type="password" class="form-control form-control-user" name="sd"  id="exampleInputPassword" placeholder="Password">
+                                <input type="password" class="form-control form-control-user" name="sd" [(ngModel)]="password"   id="exampleInputPassword" placeholder="Mot de passe">
                             </div>
                             <div class="form-group">
                                 <div class="custom-control custom-checkbox small">
-                                    <input type="checkbox" class="custom-control-input"  id="customCheck">
-                                    <label class="custom-control-label" for="customCheck">Remember
-                                        Me</label>
+                                   
+                                    
                                 </div>
                             </div>
-                            <a  class="btn btn-primary btn-user btn-block"  routerLink="/core" >
-                                Login
+                            <a  class="btn btn-primary btn-user btn-block"  (click)="login(email,password)" >
+                                
+                                Connexion
                             </a>
                             <hr>
                             <a href="index.html" class="btn btn-google btn-user btn-block">
@@ -35,13 +35,13 @@
                             <a href="index.html" class="btn btn-facebook btn-user btn-block">
                                
                             </a>
-                        </form>
+                        </div>
                         
                         <div class="text-center">
-                            <a class="small" href="forgot-password.html"></a>
+                            <a class="small" ></a>
                         </div>
                         <div class="text-center">
-                            <a class="small" routerLink="/register">Create an Account!</a>
+                            <a class="small" routerLink="/register">Créer un Compte!</a>
                         </div>
                     </div>
                 </div>

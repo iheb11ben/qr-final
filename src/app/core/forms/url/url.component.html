@@ -1,5 +1,5 @@
 <div class="container-fluid">
-
+    <ngx-qrcode-styling [config]="config"></ngx-qrcode-styling>
     <!-- Page Heading -->
 
 
@@ -13,46 +13,20 @@
 
                 <div class="form-group">
                     <label>Nom </label>
-                    <input type="text" class="form-control" />
+                    <input  [(ngModel)]="dat" type="text" class="form-control" />
                     <div class="invalid-feedback">
                         <div>Name is required</div>
                     </div>
                 </div>
                 <div class="form-group">
                     <label>Email</label>
-                    <input type="text" class="form-control" />
+                    <input [(ngModel)]="img" type="text" class="form-control" />
                     <div class="invalid-feedback">
                         <div>Description is required</div>
                     </div>
                 </div>
                 <div class="form-group">
-                    <label>Numéro de Téléphone</label>
-                    <input  type="text" class="form-control" />
-                    <div class="invalid-feedback">
-                        <div>Téléphone is required</div>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label>Activité</label>
-                    <input  type="text" class="form-control" />
-                    <div class="invalid-feedback">
-                        <div>Téléphone is required</div>
-                    </div>
-                </div>
-                <div class="input-group mb-1">
-
-                    <select class="form-control">
-        
-                        <label>choix</label>
-                        <option selected>choisis le </option>
-                        <option >aaaaaa</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <button type="submit" class="btn btn-primary" >Ajouter</button>
-                    <button type="button" class="btn btn-warning float-right">
-                        Reset
-                    </button>
+                    <button type="button" class="btn btn-primary" (click)=" onUpdate()" >Ajouter</button>
                 </div>
               
         
@@ -62,3 +36,5 @@
    
 
 </div>
+
+<app-child [data]="dat" [image]="img"></app-child>

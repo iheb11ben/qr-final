@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { UserService } from '../service/user.service';
+import { User } from '../user';
 
 @Component({
   selector: 'app-login',
@@ -6,10 +9,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
-
-  constructor() { }
+  user! : User
+email!:string
+password!:string
+  constructor(private authServ : UserService,private router:Router) { }
 
   ngOnInit(): void {
+    localStorage.removeItem('token');
   }
-
-}
+  login(email:string,password:string){
+    this.authServ.login(email,password).subscribe(data=>{
+      this.user=data
+      localStorage.setItem('role','user')
+      this.router.navigate(['/core'])
+    })
+  }
+}                             
